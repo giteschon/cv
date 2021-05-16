@@ -1,10 +1,9 @@
-.theme-light{
-    --primary-color-lighter:lightgreen;
-  --primary-color:green;
-  }
-  
+.theme-light {
+  --primary-color-lighter: lightgreen;
+  --primary-color: green;
+}
 
-  .theme-dark{
-    --primary-color-lighter:lightblue;
-  --primary-color:blue;
-  }
+.theme-dark {
+  --primary-color-lighter: lightblue;
+  --primary-color: blue;
+}
