@@ -13,14 +13,12 @@
 </head>
 
 <body>
-  <!-- https://via.placeholder.com/150 -->
-
   <div>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-expand-md navbar-light bg-light sticky-top">
 
       <a class="navbar-brand" href="#">
-        <img src="./images/placeholder.com-logo1.png" />
+        <img class="img-fluid" src="./images/placeholder.com-logo1.png" />
       </a>
 
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -54,10 +52,21 @@
             <li class="nav-item">
               <a class="nav-link" href="#"><i class="fab fa-linkedin-in"></i></a>
             </li>
+            <li class="toggle-wrapper">
+              <!-- <i class="fas fa-sun"></i> -->
+              <label class="toggle">
+                <input type="checkbox" onclick="toggleTheme(event)">
+                <span class="slider">
+                  <i id="themeIcon" class="fas fa-moon"></i>
+                </span>
+              </label>
+              <!-- <i class="fas fa-moon"></i> -->
+            </li>
         </form>
       </div>
     </nav>
 
+    
 <!-- Fav button -->
 <div class="fav-button">
   <button onclick="scrollToTop()">
@@ -70,7 +79,7 @@
 
       <section id="about">
         <div class="row">
-          <div class="col">
+          <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-4">
             <h2>About</h2>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam id sagittis dui, id tincidunt nulla. Cras
@@ -87,41 +96,62 @@
               ultricies. Maecenas sit amet velit arcu.
             </p>
           </div>
-          <div class="col">
-            <img src="https://via.placeholder.com/550" />
+          <div class="col col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-8">
+            <img class="img-fluid" src="https://via.placeholder.com/550" />
           </div>
         </div>
       </section>
 
-
-      <section id="skills">
-        <h2>Skills</h2>
+<!-- Skills -->
+      <section id="skills" class="slide-right">
+        <h2 >Skills</h2>     
         <div class="row">
-          <div class="col">
-            <i class="fab fa-java"></i>
+          <!-- <div class="col offset-md-1 offset-1 col-10 col-sm-10  -->
+          <div class="col  col-12 col-sm-12 offset-md-1 col-md-5 offset-lg-1 col-lg-4 offset-xl-1 col-xl-4 "> 
+            
+            <div class="skill-wrapper">
+              <div id="javaSkillLevel"></div>
+              <i class="fab fa-java"></i>            
+            </div>    
+            <div class="description">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam id sagittis dui, id tincidunt nulla. Cras
+                vitae
+                cursus libero. Etiam non leo pulvinar, viverra magna sit amet, malesuada ipsum. Suspendisse purus lorem,
+                ultrices id enim et, volutpat laoreet odio. Pellentesque velit orci, tincidunt at aliquam nec, laoreet a
+                leo.
+                </p>
+            </div>     
+            <!-- todo accordion -> frameworks -->
           </div>
-          <div class="col">
-            <i class="fab fa-css3-alt"></i>
+          <div class="col  col-12 col-sm-12 offset-md-1 col-md-5 offset-lg-1 col-lg-4 offset-xl-1 col-xl-4 ">          
+<div id="cSharpSkillLevel"> </div>
+              <i class="fab fa-css3-alt"></i>          
           </div>
         </div>
 
         <div class="row">
-          <div class="col">
+          <div class="col  col-12 col-sm-12 offset-md-1 col-md-5 offset-lg-1 col-lg-4 offset-xl-1 col-xl-4 "> 
+            <div id="jsSkillLevel"></div>
             <i class="fab fa-html5"></i>
           </div>
-          <div class="col">
+          <div class="col  col-12 col-sm-12 offset-md-1 col-md-5 offset-lg-1 col-lg-4 offset-xl-1 col-xl-4 "> 
+            <div id="tsSkillLevel"></div>
             <i class="fab fa-css3-alt"></i>
           </div>
         </div>
 
         <div class="row">
-          <div class="col">
+          <div class="col  col-12 col-sm-12 offset-md-1 col-md-5 offset-lg-1 col-lg-4 offset-xl-1 col-xl-4 "> 
+            <div id="htmlSkillLevel"></div>
             <i class="fab fa-js-square"></i>
           </div>
-          <div class="col">
+          <div class="col  col-12 col-sm-12 offset-md-1 col-md-5 offset-lg-1 col-lg-4 offset-xl-1 col-xl-4 "> 
+            <div id="cssSkillLevel"></div>
             <i class="fab fa-css3-alt"></i>
           </div>
-        </div>
+        </div>      
+</section>
 
         <!-- //todo show only partial text. show more on click -->
         <section id="projects">
@@ -144,6 +174,7 @@
                 Aliquam
                 consequat suscipit ultricies. Maecenas sit amet velit arcu.
               </p>
+              <button onClick="showMore(event)">Show more</button>
             </div>
             </div>
           </div>         
