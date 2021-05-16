@@ -8,8 +8,8 @@ html {
   margin: 0;
   font-family: "Raleway", sans-serif;
   font-weight: 300;
-  overflow-x: hidden;
-  overflow-y: auto;
+  /* overflow-x: hidden;
+  overflow-y: auto; */
 }
 
 /*
@@ -37,74 +37,6 @@ Scrollbar
 *::-webkit-scrollbar-thumb {
   background-color: var(--primary-color);
   border-radius: 30px;
-}
-
-/*
---------------- 
-Navbar
----------------
-*/
-.navbar-brand > img {
-  width: 100px;
-}
-
-.toggle-wrapper {
-  display: flex;
-  align-items: center;
-  margin-left: 20px;
-}
-
-.toggle {
-  width: 40px;
-  height: 20px;
-  background: purple;
-  border-radius: 20px;
-}
-
-.toggle input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-.toggle .slider {
-  position: relative;
-  left: -8px;
-  cursor: pointer;
-  width: 28px;
-  height: 28px;
-  background: red;
-  border-radius: 20px;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-  text-align: center;
-  vertical-align: middle;
-  line-height: 28px;
-  color: white;
-}
-
-/* .slider:before {  
-  height: 15px;
-  width: 15px;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
-} */
-
-input:checked + .slider {
-  background-color: #2196f3;
-}
-
-/* input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
-} */
-
-input:checked + .slider {
-  -webkit-transform: translateX(15px);
-  -ms-transform: translateX(15px);
-  transform: translateX(15px);
 }
 
 /*
@@ -138,13 +70,115 @@ Fav button
 
 /*
 --------------- 
+Navbar
+---------------
+*/
+
+.navbar-brand{
+  margin-right: 16px !important;
+}
+
+.navbar-brand > img {
+  width: 100px;
+}
+
+.nav-icons{
+  flex-direction: row !important;
+  column-gap: 5px;
+}
+
+/*
+--------------- 
+Toggle
+---------------
+*/
+
+.toggle-wrapper{
+  width:60px;
+  height:50px;
+  position: relative;
+  order:1;
+}
+
+.toggle {
+  position: absolute;
+  margin:0 0 0 16px;
+  width: 40px;
+  height: 20px;
+  background: purple;
+  border-radius: 20px;
+  
+}
+
+.toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle .slider {
+  position: relative;
+  left: -8px;
+  cursor: pointer;
+  width: 28px !important;
+  height: 28px !important;
+  background: red;
+  border-radius: 20px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 28px;
+  color: white;
+}
+
+.slider::before {  
+  height: 28px;
+  width: 28px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+/* input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+} */
+
+input:checked + .slider {
+  -webkit-transform: translateX(15px);
+  -ms-transform: translateX(15px);
+  transform: translateX(15px);
+}
+/*
+--------------- 
+/Toggle
+---------------
+*/
+
+/*
+--------------- 
+/Navbar
+---------------
+*/
+
+/*
+--------------- 
 Content
 ---------------
 */
 
 .container {
   padding: 0 !important;
-  height: 100%;
+ 
+  height: 92%;
+  overflow-y: auto;
+  overflow-x: hidden
 }
 
 p {
@@ -253,23 +287,26 @@ Projects
 
 /*
 --------------- 
+/Content
+---------------
+*/
+
+/*
+--------------- 
 Footer
 ---------------
 */
 
-footer {
-  width: 100%;
-  float: bottom;
-  background: var(--primary-color);
-  display: inline-grid;
-  grid-template-columns: auto auto;
-  align-items: center;
+footer {  
+  background: var(--primary-color); 
   padding: 8px 16px;
 }
 
-.item-2 {
-  justify-self: right;
-}
+/*
+--------------- 
+/Footer
+---------------
+*/
 
 /*
 --------------- 
@@ -333,6 +370,12 @@ Keyframes
 
 /*
 --------------- 
+/Keyframes
+---------------
+*/
+
+/*
+--------------- 
 Media
 ---------------
 */
@@ -342,11 +385,36 @@ Media
 Mobile
 ---------------
 */
-@media only screen and (max-width: 420px) {
+@media only screen and (max-width:767px) {
   .fav-button {
     visibility: hidden;
   }
+
   .container {
     padding: 16px !important;
   }
+
+  /* .navbar{
+    flex-wrap: nowrap !important;
+  } */
+
+  .toggle{
+    order:0 !important;
+  }
+
+  .navbar-brand{
+margin:auto;
+  }
 }
+
+/*
+--------------- 
+/Mobile
+---------------
+*/
+
+/*
+--------------- 
+/Media
+---------------
+*/
