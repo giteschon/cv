@@ -93,16 +93,24 @@ Toggle
 ---------------
 */
 
+
 .toggle-wrapper{
-  width:60px;
-  height:50px;
-  position: relative;
   order:1;
+  width:50px !important;
+  flex:0 0 50px;
+  min-width: 50px;
+  min-height: 50px;
+  width:50px;
+  height:100% !important;
+  position: relative;
+  align-items: center;
+  margin-left: 10px;;
+ 
 }
 
 .toggle {
-  position: absolute;
-  margin:0 0 0 16px;
+  position: relative;
+  /* margin:0 0 0 16px; */
   width: 40px;
   height: 20px;
   background: purple;
@@ -110,16 +118,19 @@ Toggle
   
 }
 
-.toggle input {
+ .toggle input {
   opacity: 0;
   width: 0;
   height: 0;
-}
+} 
 
 .toggle .slider {
-  position: relative;
+  position: absolute;
   left: -8px;
+  top:-4px;
   cursor: pointer;
+  min-width: 28px;
+  min-height: 28px;
   width: 28px !important;
   height: 28px !important;
   background: red;
@@ -130,6 +141,10 @@ Toggle
   vertical-align: middle;
   line-height: 28px;
   color: white;
+}
+
+.toggle i{
+  line-height: 28px;
 }
 
 .slider::before {  
@@ -151,9 +166,10 @@ input:checked + .slider {
 } */
 
 input:checked + .slider {
-  -webkit-transform: translateX(15px);
-  -ms-transform: translateX(15px);
-  transform: translateX(15px);
+  --translate-for:25px;
+  -webkit-transform: translateX(var(--translate-for));
+  -ms-transform: translateX(var(--translate-for));
+  transform: translateX(var(--translate-for));
 }
 /*
 --------------- 
@@ -174,10 +190,9 @@ Content
 */
 
 .container {
-  padding: 0 !important;
- 
+  padding: 0 !important; 
   height: 92%;
-  overflow-y: auto;
+  overflow-y: hidden;
   overflow-x: hidden
 }
 
@@ -251,13 +266,19 @@ Projects
 */
 
 .projects-wrapper {
-  display: grid;
+  /* display: grid;
   grid-template-columns: repeat(3, 1fr);
-  column-gap:16px;
+
+  column-gap:16px; */
+
+  grid-template-rows: repeat(auto-fil, minmax(200px, 1fr));
+  grid-template-columns: masonry; 
+  grid-gap: 10px;
+  height:100vh;
 }
 
 #projects .card {
-  width: 100%;
+  width: 200px;
 }
 
 #projects .card-text {
