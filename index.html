@@ -25,65 +25,65 @@
 
   <!-- Navigation -->
   <nav class="navbar sticky-top navbar-expand-lg navbar-expand-md  navbar-light bg-light ">
-    
+
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapseNavbar">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-   
+
     <a class="navbar-brand mr-auto" href="#">
       <img class="img-fluid" src="./images/placeholder.com-logo1.png" />
     </a>
 
     <div class="navbar-nav toggle-wrapper">
-    
-    <label class="toggle">
-      <input type="checkbox" onclick="toggleTheme(event)">
-      <div class="slider">
-        <i id="themeIcon" class="fas fa-moon"></i>
-      </div>
-    </label>     
-  </div>
+
+      <label class="toggle">
+        <input type="checkbox" onclick="toggleTheme(event)">
+        <div class="slider">
+          <i id="themeIcon" class="fas fa-moon"></i>
+        </div>
+      </label>
+    </div>
 
     <!-- Navigation collapsable -->
-      <div class="collapse navbar-collapse" id="collapseNavbar">
-        <ul class="navbar-nav  mr-auto mt-2 mt-lg-0" id="menu">
+    <div class="collapse navbar-collapse" id="collapseNavbar">
+      <ul class="navbar-nav  mr-auto mt-2 mt-lg-0" id="menu">
 
-          <li class="nav-item active">
-            <a class="nav-link" href="#about">About <span class="sr-only">(current)</span></a>
-          </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#about">About <span class="sr-only">(current)</span></a>
+        </li>
 
-          <li class="nav-item">
-            <a class="nav-link" href="#skills">Skills</a>
-          </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#skills">Skills</a>
+        </li>
 
-          <li class="nav-item">
-            <a class="nav-link" href="#projects">Projects</a>
-          </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#projects">Projects</a>
+        </li>
 
-          <li class="nav-item">
-            <a class="nav-link" href="#blog">Blog</a>
-          </li>
-        </ul>    
+        <li class="nav-item">
+          <a class="nav-link" href="#blog">Blog</a>
+        </li>
+      </ul>
 
-        <ul class="navbar-nav form-inline nav-icons ml-auto">
+      <ul class="navbar-nav form-inline nav-icons ml-auto">
 
-          <li class="nav-item">
-            <a class="nav-link" href="#"><i class="fab fa-github"></i></span></a>
-          </li>
-    
-          <li class="nav-item">
-            <a class="nav-link" href="#"><i class="fab fa-instagram"></i></a>
-          </li>
-    
-          <li class="nav-item">
-            <a class="nav-link" href="#"><i class="fab fa-linkedin-in"></i></a>
-          </li> 
-        </ul>
-      </div> 
-        <!-- /Navigation collapsable -->  
+        <li class="nav-item">
+          <a class="nav-link" href="#"><i class="fab fa-github"></i></span></a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#"><i class="fab fa-instagram"></i></a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#"><i class="fab fa-linkedin-in"></i></a>
+        </li>
+      </ul>
+    </div>
+    <!-- ///Navigation collapsable -->
   </nav>
-  <!-- /Navigation -->
+  <!-- ///Navigation -->
 
   <!-- Content -->
   <div class="container">
@@ -166,66 +166,62 @@
       </div>
     </section>
 
-    <!-- //todo show only partial text. show more on click -->
+    <!-- /// Skills -->
+
+    <!-- Projects -->
     <section id="projects">
       <h2>Projects</h2>
       <!-- <p>Coming soon</p> -->
-      <div class="projects-wrapper">
-        <div class="card">
-          <img src="https://via.placeholder.com/250" />
-          <h5 class="card-title">Project 1</h5>
-          <div class="card-body">
-            <p class="card-text">
+
+      <div class="project-grid">
+        <div class="project-flip">
+          <div class="front">
+            <img src="https://via.placeholder.com/250" />
+          </div>
+          <div class="back">
+            <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam id sagittis dui, id tincidunt nulla. Cras
               vitae
               cursus libero. Etiam non leo pulvinar, viverra magna sit amet, malesuada ipsum. Suspendisse purus lorem,
               ultrices id enim et, volutpat laoreet odio. Pellentesque velit orci, tincidunt at aliquam nec, laoreet a
               leo. Quisque rhoncus metus condimentum nunc varius ullamcorper. Etiam volutpat congue laoreet. Nam
               lacinia
-              efficitur velit, ut lacinia massa auctor rutrum. Pellentesque semper tincidunt pellentesque. Donec arcu
-              ipsum, tincidunt sit amet hendrerit ut, consectetur at libero. In feugiat non risus vel eleifend.
-              Aliquam
-              consequat suscipit ultricies. Maecenas sit amet velit arcu.
             </p>
-            <button onClick="showMore(event)">Show more</button>
           </div>
         </div>
 
-        <div class="card">
-          <img src="https://via.placeholder.com/250" />
-          <h5 class="card-title">Project 1</h5>
-          <div class="card-body">
-            <p class="card-text">
+        <div class="project-flip">
+          <div class="front">
+            <img src="https://via.placeholder.com/250" />
+          </div>
+          <div class="back">
+            <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam id sagittis dui, id tincidunt nulla. Cras
               vitae
-              cursus libero. Etiam non leo pulvinar, viverra magna sit amet, malesuada ipsum. Suspendisse purus
-              lorem,
-              ultrices id enim et, volutpat laoreet odio. Pellentesque velit orci, tincidunt at aliquam nec, laoreet
-              a
+              cursus libero. Etiam non leo pulvinar, viverra magna sit amet, malesuada ipsum. Suspendisse purus lorem,
+              ultrices id enim et, volutpat laoreet odio. Pellentesque velit orci, tincidunt at aliquam nec, laoreet a
               leo. Quisque rhoncus metus condimentum nunc varius ullamcorper. Etiam volutpat congue laoreet. Nam
               lacinia
-              efficitur velit, ut lacinia massa auctor rutrum. Pellentesque semper tincidunt pellentesque. Donec
-              arcu
-              ipsum, tincidunt sit amet hendrerit ut, consectetur at libero. In feugiat non risus vel eleifend.
-              Aliquam
-              consequat suscipit ultricies. Maecenas sit amet velit arcu.
             </p>
             <button onClick="showMore(event)">Show more</button>
           </div>
-
         </div>
+
+        <div class="project">
+          <img src="https://via.placeholder.com/250" />
+        </div>
+
+      </div>
     </section>
+    <!-- ///Projects -->
   </div>
-<!-- /Content -->
-
-
-
+  <!-- ///Content -->
 
   <!-- Footer -->
 
-  <footer class="d-inline-flex w-100">  
-      <span class="mr-auto">&copy;Copyright 2021 giteschon</span>
-  
+  <footer class="d-inline-flex w-100">
+    <span class="mr-auto">&copy;Copyright 2021 giteschon</span>
+
     <div>
       <span>Resources:</span>
       <a href="#"><i class="fab fa-font-awesome"></i></a>
@@ -234,7 +230,9 @@
 
   </footer>
 
-  <!-- /Footer -->
+  <!-- ///Footer -->
+
+  <!-- Scripts -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
@@ -246,6 +244,8 @@
     crossorigin="anonymous"></script>
   <script src="https://kit.fontawesome.com/1a0eac71bf.js" crossorigin="anonymous"></script>
   <script src="./js/script.js"></script>
+
+  <!-- ///Scripts -->
 </body>
 
 </html>

@@ -74,7 +74,7 @@ Navbar
 ---------------
 */
 
-.navbar-brand{
+.navbar-brand {
   margin-right: 16px !important;
 }
 
@@ -82,7 +82,7 @@ Navbar
   width: 100px;
 }
 
-.nav-icons{
+.nav-icons {
   flex-direction: row !important;
   column-gap: 5px;
 }
@@ -93,19 +93,17 @@ Toggle
 ---------------
 */
 
-
-.toggle-wrapper{
-  order:1;
-  width:50px !important;
-  flex:0 0 50px;
+.toggle-wrapper {
+  order: 1;
+  width: 50px !important;
+  flex: 0 0 50px;
   min-width: 50px;
   min-height: 50px;
-  width:50px;
-  height:100% !important;
+  width: 50px;
+  height: 100% !important;
   position: relative;
   align-items: center;
-  margin-left: 10px;;
- 
+  margin-left: 10px;
 }
 
 .toggle {
@@ -115,19 +113,18 @@ Toggle
   height: 20px;
   background: purple;
   border-radius: 20px;
-  
 }
 
- .toggle input {
+.toggle input {
   opacity: 0;
   width: 0;
   height: 0;
-} 
+}
 
 .toggle .slider {
   position: absolute;
   left: -8px;
-  top:-4px;
+  top: -4px;
   cursor: pointer;
   min-width: 28px;
   min-height: 28px;
@@ -143,18 +140,18 @@ Toggle
   color: white;
 }
 
-.toggle i{
+.toggle i {
   line-height: 28px;
 }
 
-.slider::before {  
+.slider::before {
   height: 28px;
   width: 28px;
   left: 4px;
   bottom: 4px;
   background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 input:checked + .slider {
@@ -166,7 +163,7 @@ input:checked + .slider {
 } */
 
 input:checked + .slider {
-  --translate-for:25px;
+  --translate-for: 25px;
   -webkit-transform: translateX(var(--translate-for));
   -ms-transform: translateX(var(--translate-for));
   transform: translateX(var(--translate-for));
@@ -190,10 +187,10 @@ Content
 */
 
 .container {
-  padding: 0 !important; 
+  padding: 0 !important;
   height: 92%;
   overflow-y: hidden;
-  overflow-x: hidden
+  overflow-x: hidden;
 }
 
 p {
@@ -261,35 +258,24 @@ Skills
 
 /*
 --------------- 
+///Skills
+---------------
+*/
+
+/*
+--------------- 
 Projects
 ---------------
 */
 
-.projects-wrapper {
-  /* display: grid;
-  grid-template-columns: repeat(3, 1fr);
-
-  column-gap:16px; */
-
-  grid-template-rows: repeat(auto-fil, minmax(200px, 1fr));
-  grid-template-columns: masonry; 
-  grid-gap: 10px;
-  height:100vh;
-}
-
-#projects .card {
-  width: 200px;
-}
-
-#projects .card-text {
-  height: 150px;
-  overflow: hidden;
-}
-
-#projects h5 {
-  text-align: center;
-  padding: 8px;
-  margin: 0;
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-rows: auto;
+  column-gap: 16px;
+  row-gap: 8px;
+  align-items: center;
+  justify-items: center;
 }
 
 #projects button {
@@ -297,18 +283,63 @@ Projects
   border: 0;
   padding: 1px;
   border-bottom: 1px solid;
-  float: right;
+  /* float: right; */
   outline: none;
+  margin-right: 30px;
 }
 
 .more-text {
   overflow: visible !important;
   height: fit-content !important;
+  grid-column: span 2;
 }
 
 /*
 --------------- 
-/Content
+Flip Card
+---------------
+*/
+.project-flip {
+  display: grid;
+  grid-template: 1fr / 1fr;
+  grid-template-areas: "frontAndBack";
+  transform-style: preserve-3d;
+  transition: all 0.7s ease;
+}
+
+.project-flip div {
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+
+.front {
+  grid-area: frontAndBack;
+}
+
+.back {
+  grid-area: frontAndBack;
+  transform: rotateY(-180deg);
+}
+
+.project-flip:hover {
+  transform: rotateY(180deg);
+}
+
+/*
+--------------- 
+///Flip Card
+---------------
+*/
+
+/*
+--------------- 
+///Projects
+---------------
+*/
+
+/*
+--------------- 
+///Content
 ---------------
 */
 
@@ -318,14 +349,14 @@ Footer
 ---------------
 */
 
-footer {  
-  background: var(--primary-color); 
+footer {
+  background: var(--primary-color);
   padding: 8px 16px;
 }
 
 /*
 --------------- 
-/Footer
+///Footer
 ---------------
 */
 
@@ -389,9 +420,35 @@ Keyframes
   }
 }
 
+/**
+ * ----------------------------------------
+ * animation flip-vertical-right
+ * ----------------------------------------
+ */
+@-webkit-keyframes flip-vertical-right {
+  0% {
+    -webkit-transform: rotateY(0);
+    transform: rotateY(0);
+  }
+  100% {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+  }
+}
+@keyframes flip-vertical-right {
+  0% {
+    -webkit-transform: rotateY(0);
+    transform: rotateY(0);
+  }
+  100% {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+  }
+}
+
 /*
 --------------- 
-/Keyframes
+///Keyframes
 ---------------
 */
 
@@ -406,7 +463,7 @@ Media
 Mobile
 ---------------
 */
-@media only screen and (max-width:767px) {
+@media only screen and (max-width: 767px) {
   .fav-button {
     visibility: hidden;
   }
@@ -419,23 +476,23 @@ Mobile
     flex-wrap: nowrap !important;
   } */
 
-  .toggle{
-    order:0 !important;
+  .toggle {
+    order: 0 !important;
   }
 
-  .navbar-brand{
-margin:auto;
+  .navbar-brand {
+    margin: auto;
   }
 }
 
 /*
 --------------- 
-/Mobile
+///Mobile
 ---------------
 */
 
 /*
 --------------- 
-/Media
+///Media
 ---------------
 */
