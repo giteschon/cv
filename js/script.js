@@ -4,7 +4,7 @@ const SHOW_MORE = "more-text";
 (function () {
     initTheme();
     initSkillsLevel();
-    addActiveNavEvents();
+   addActiveNavEvents();
 })();
 
 

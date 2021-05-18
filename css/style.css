@@ -7,7 +7,9 @@ html {
   padding: 0;
   margin: 0;
   font-family: "Raleway", sans-serif;
-  font-weight: 300;
+  font-weight: 300; 
+  scroll-padding-top: 100px; 
+ 
   /* overflow-x: hidden;
   overflow-y: auto; */
 }
@@ -187,7 +189,7 @@ Content
 */
 
 .container {
-  padding: 0 !important;
+  padding: 0 !important;  
   height: 92%;
   overflow-y: hidden;
   overflow-x: hidden;
@@ -205,6 +207,12 @@ section {
   -webkit-animation: slide-right 1s ease-out both;
   animation: slide-right 1s ease-out both;
 }
+
+section:first-of-type{
+  scroll-margin-top: 200px;
+}
+
+
 
 /*
 --------------- 
@@ -297,6 +305,7 @@ Projects
 /*
 --------------- 
 Flip Card
+Reference: https://codepen.io/nicolaskadis/pen/yodmQv
 ---------------
 */
 .project-flip {
