@@ -24,7 +24,7 @@ Scrollbar
 /* Works on Firefox */
 * {
   scrollbar-width: thin;
-  scrollbar-color: var(--primary-color) var(--primary-color-lighter);
+  scrollbar-color:  var(--primary-color-darkest) var(--accent-color);
 }
 
 /* Works on Chrome, Edge, and Safari */
@@ -33,11 +33,11 @@ Scrollbar
 }
 
 *::-webkit-scrollbar-track {
-  background: var(--primary-color-lighter);
+  background: var(--accent-color);
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: var(--primary-color);
+  background-color: var(--primary-color-darkest);
   border-radius: 30px;
 }
 
@@ -60,7 +60,7 @@ Fav button
   cursor: pointer;
   outline: none;
   font-size: 40px;
-  color: var(--primary-color);
+  color: var(--primary-color-darkest);
   /* todo box shadow */
 }
 
@@ -75,6 +75,23 @@ Fav button
 Navbar
 ---------------
 */
+
+.navbar{
+  background:var(--accent-color) !important;  
+}
+.nav-item>a{
+  color:var(--accent-color-lightest) !important;
+}
+
+.nav-item a:hover{
+  transform: scale(1.1);
+  color:var(--primary-color) !important;
+}
+
+.navbar-nav .active>a {
+color:var(--primary-color-darkest) !important;
+font-weight: 500;
+}
 
 .navbar-brand {
   margin-right: 16px !important;
@@ -113,7 +130,7 @@ Toggle
   /* margin:0 0 0 16px; */
   width: 40px;
   height: 20px;
-  background: purple;
+  background: var(--primary-color-darkest);
   border-radius: 20px;
 }
 
@@ -132,7 +149,7 @@ Toggle
   min-height: 28px;
   width: 28px !important;
   height: 28px !important;
-  background: red;
+  background: var(--primary-color-lighter);
   border-radius: 20px;
   -webkit-transition: 0.4s;
   transition: 0.4s;
@@ -151,13 +168,13 @@ Toggle
   width: 28px;
   left: 4px;
   bottom: 4px;
-  background-color: white;
+  background-color: var(--accent-color-lightest);
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
 
 input:checked + .slider {
-  background-color: #2196f3;
+  background-color: var(--primary-color-lighter);;
 }
 
 /* input:focus + .slider {
@@ -195,6 +212,10 @@ Content
   overflow-x: hidden;
 }
 
+h2{
+  color:var(--primary-color);
+}
+
 p {
   text-align: justify;
 }
@@ -227,6 +248,7 @@ Skills
 #skills i {
   font-size: 50px;
   text-align: center;
+  color: var(--primary-color-darkest);
 }
 
 #skills > .row > .col > div:first-child {
@@ -238,9 +260,9 @@ Skills
 }
 
 #skills > .row > .col:hover {
-  background: var(--light);
+  background: var(--primary-color-lighter);
   transform: scale(1.1);
-  /* z-index:2; */
+  border-radius: 10%;
 }
 
 .skill-wrapper > div:first-child {
@@ -254,11 +276,13 @@ Skills
 #skills .skill-level {
   width: 15px;
   height: 15px;
-  background: var(--primary-color-lighter);
+  background: var(--accent-color);
   margin: 5px;
   border-radius: 50%;
   display: inline-block;
 }
+
+
 
 .checked {
   background: var(--primary-color) !important;
@@ -314,12 +338,22 @@ Reference: https://codepen.io/nicolaskadis/pen/yodmQv
   grid-template-areas: "frontAndBack";
   transform-style: preserve-3d;
   transition: all 0.7s ease;
+  max-width:300px;
+  max-height: 300px;
+
 }
 
 .project-flip div {
   backface-visibility: hidden;
-  transform-style: preserve-3d;
+  transform-style: preserve-3d; 
 }
+
+.project-flip div,
+.project-flip img
+ {  
+  border-radius: 5px;
+}
+
 
 .front {
   grid-area: frontAndBack;
@@ -328,12 +362,21 @@ Reference: https://codepen.io/nicolaskadis/pen/yodmQv
 .back {
   grid-area: frontAndBack;
   transform: rotateY(-180deg);
+  background:var(--primary-color);
+  box-sizing: border-box;  
 }
 
 .project-flip:hover {
   transform: rotateY(180deg);
 }
 
+.back p{   
+  padding: 16px;
+  overflow:hidden;
+  margin:0;
+  max-height: 250px;
+  
+}
 /*
 --------------- 
 ///Flip Card
@@ -359,9 +402,30 @@ Footer
 */
 
 footer {
-  background: var(--primary-color);
+  height:60px!important;
+  background: var(--primary-color-darkest);
   padding: 8px 16px;
+  color: var(--primary-color-lighter);
+  align-items: center;
+  justify-items: center;
 }
+
+footer a{
+  color:var(--primary-color-lighter);
+  font-size: 24px;
+  margin:2px 8px;
+}
+
+footer a:active,
+footer a:visited{
+  color:var(--primary-color-lighter);
+}
+
+footer a:hover{
+  color:var(--accent-color);
+}
+
+
 
 /*
 --------------- 

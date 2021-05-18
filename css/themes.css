@@ -1,6 +1,11 @@
 .theme-light {
-  --primary-color-lighter: lightgreen;
-  --primary-color: green;
+  --primary-color-lighter: #ADA8DE;
+  --primary-color: #7677BA;
+  --primary-color-darkest:#565692;
+  --accent-color-lightest:#f0e2f5;
+  --accent-color:#BD9BCE;
+
+  --text-color:#444;
 }
 
 .theme-dark {
