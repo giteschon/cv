@@ -253,16 +253,19 @@ Skills
 
 #skills > .row > .col > div:first-child {
   display: inline-block;
+  padding-top:8px;
 }
+
 #skills > .row > .col {
   text-align: center;
   margin-bottom: 16px;
+  border-radius: var(--border-radius);
 }
 
 #skills > .row > .col:hover {
   background: var(--primary-color-lighter);
-  transform: scale(1.1);
-  border-radius: 10%;
+  transform: scale(1.1);  
+  border-radius: var(--border-card);
 }
 
 .skill-wrapper > div:first-child {
@@ -282,8 +285,6 @@ Skills
   display: inline-block;
 }
 
-
-
 .checked {
   background: var(--primary-color) !important;
 }
@@ -301,8 +302,9 @@ Projects
 */
 
 .project-grid {
+  margin:16px;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-template-rows: auto;
   column-gap: 16px;
   row-gap: 8px;
@@ -315,7 +317,7 @@ Projects
   border: 0;
   padding: 1px;
   border-bottom: 1px solid;
-  /* float: right; */
+  float: right;
   outline: none;
   margin-right: 30px;
 }
@@ -335,7 +337,7 @@ Reference: https://codepen.io/nicolaskadis/pen/yodmQv
 .project-flip {
   display: grid;
   grid-template: 1fr / 1fr;
-  grid-template-areas: "frontAndBack";
+  grid-template-areas: "frontAndBack";  
   transform-style: preserve-3d;
   transition: all 0.7s ease;
   max-width:300px;
@@ -351,7 +353,7 @@ Reference: https://codepen.io/nicolaskadis/pen/yodmQv
 .project-flip div,
 .project-flip img
  {  
-  border-radius: 5px;
+  border-radius: var(--border-card);
 }
 
 
@@ -374,9 +376,9 @@ Reference: https://codepen.io/nicolaskadis/pen/yodmQv
   padding: 16px;
   overflow:hidden;
   margin:0;
-  max-height: 250px;
-  
+  max-height: 250px;  
 }
+
 /*
 --------------- 
 ///Flip Card
@@ -555,6 +557,21 @@ Mobile
 
   .navbar-brand {
     margin: auto;
+  }
+
+  #skills > .row > .col{
+   max-width: 320px;
+  margin:auto;
+  padding:0;
+  }
+
+  #skills > .row > .col:hover p{
+   padding:0 8px;
+   }
+
+  #skills > .row > .col:hover {  
+    transform: scale(1);  
+    max-width: 320px;
   }
 }
 

@@ -1,3 +1,6 @@
+:root{
+  --border-card:10px;
+}
 .theme-light {
   --primary-color-lighter: #ADA8DE;
   --primary-color: #7677BA;
